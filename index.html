@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paginations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="theme-toggle" class="toggle">
+
+        <div class="bg-layer"></div>
+
+    <div class="container">
+        <div class="top-bar">
+            <div class="profile-wrapper">
+                <img class="profile" src="assets/avatar.png" alt="profile picture" />
+                <p>@davidm_ai</p>
+            </div>
+            <label for="theme-toggle" class="theme-switch" aria-label="Toggle light and dark theme">
+                <span class="theme-switch__icon theme-switch__moon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg></span>
+                <span class="theme-switch__track">
+                    <span class="theme-switch__thumb"></span>
+                </span>
+                <span class="theme-switch__icon theme-switch__sun"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg></span>
+            </label>
+        </div>
+
+        <div class="title-group">
+            <p class="title-label">AI-First Components</p>
+            <h1>Pagination <span class="emph">Styles</span></h1>
+            <p class="title-sub">8 ways to navigate pages</p>
+        </div>
+
+        <div class="specimens">
+
+            <!-- ═══ 1. Classic ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">1</span><span class="specimen__name">Classic</span></div>
+                <nav class="pag pag--classic" aria-label="Classic pagination">
+                    <input type="radio" name="a" id="a1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="a" id="a2" class="pag-r" checked aria-label="Page 2">
+                    <input type="radio" name="a" id="a3" class="pag-r" aria-label="Page 3">
+                    <input type="radio" name="a" id="a4" class="pag-r" aria-label="Page 4">
+                    <input type="radio" name="a" id="a5" class="pag-r" aria-label="Page 5">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+                        <label for="a1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="a2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="a3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="a4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                    </div>
+                    <label for="a1" class="pag__item">1</label>
+                    <label for="a2" class="pag__item">2</label>
+                    <label for="a3" class="pag__item">3</label>
+                    <label for="a4" class="pag__item">4</label>
+                    <label for="a5" class="pag__item">5</label>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="a2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="a3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="a4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="a5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 2. Pills ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">2</span><span class="specimen__name">Pills</span></div>
+                <nav class="pag pag--pills" aria-label="Pills pagination">
+                    <input type="radio" name="b" id="b1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="b" id="b2" class="pag-r" checked aria-label="Page 2">
+                    <input type="radio" name="b" id="b3" class="pag-r" aria-label="Page 3">
+                    <input type="radio" name="b" id="b4" class="pag-r" aria-label="Page 4">
+                    <input type="radio" name="b" id="b5" class="pag-r" aria-label="Page 5">
+                    <input type="radio" name="b" id="b6" class="pag-r" aria-label="Page 6">
+                    <input type="radio" name="b" id="b7" class="pag-r" aria-label="Page 7">
+                    <input type="radio" name="b" id="b8" class="pag-r" aria-label="Page 8">
+                    <input type="radio" name="b" id="b9" class="pag-r" aria-label="Page 9">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+                        <label for="b1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b5" class="pag__arrow pag__arrow--prev" data-when="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b6" class="pag__arrow pag__arrow--prev" data-when="7"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b7" class="pag__arrow pag__arrow--prev" data-when="8"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="b8" class="pag__arrow pag__arrow--prev" data-when="9"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                    </div>
+                    <label for="b1" class="pag__item pag__pill--p1">1</label>
+                    <span class="pag__ellipsis pag__ellipsis--left">...</span>
+                    <label for="b2" class="pag__item pag__pill--p2">2</label>
+                    <label for="b3" class="pag__item pag__pill--p3">3</label>
+                    <label for="b4" class="pag__item pag__pill--p4">4</label>
+                    <label for="b5" class="pag__item pag__pill--p5">5</label>
+                    <label for="b6" class="pag__item pag__pill--p6">6</label>
+                    <label for="b7" class="pag__item pag__pill--p7">7</label>
+                    <label for="b8" class="pag__item pag__pill--p8">8</label>
+                    <span class="pag__ellipsis pag__ellipsis--right">...</span>
+                    <label for="b9" class="pag__item pag__pill--p9">9</label>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="b2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b6" class="pag__arrow pag__arrow--next" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b7" class="pag__arrow pag__arrow--next" data-when="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b8" class="pag__arrow pag__arrow--next" data-when="7"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="b9" class="pag__arrow pag__arrow--next" data-when="8"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="9"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 3. Dots ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">3</span><span class="specimen__name">Dots</span></div>
+                <nav class="pag pag--dots" aria-label="Dots pagination">
+                    <input type="radio" name="d" id="d1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="d" id="d2" class="pag-r" checked aria-label="Page 2">
+                    <input type="radio" name="d" id="d3" class="pag-r" aria-label="Page 3">
+                    <input type="radio" name="d" id="d4" class="pag-r" aria-label="Page 4">
+                    <input type="radio" name="d" id="d5" class="pag-r" aria-label="Page 5">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></span>
+                        <label for="d1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></label>
+                        <label for="d2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></label>
+                        <label for="d3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></label>
+                        <label for="d4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></label>
+                    </div>
+                    <label for="d1" class="pag__dot"></label>
+                    <label for="d2" class="pag__dot"></label>
+                    <label for="d3" class="pag__dot"></label>
+                    <label for="d4" class="pag__dot"></label>
+                    <label for="d5" class="pag__dot"></label>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="d2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5-5 5"/><path d="M6 7l5 5-5 5"/></svg></label>
+                        <label for="d3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5-5 5"/><path d="M6 7l5 5-5 5"/></svg></label>
+                        <label for="d4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5-5 5"/><path d="M6 7l5 5-5 5"/></svg></label>
+                        <label for="d5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5-5 5"/><path d="M6 7l5 5-5 5"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7l5 5-5 5"/><path d="M6 7l5 5-5 5"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 4. Bordered ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">4</span><span class="specimen__name">Bordered</span></div>
+                <nav class="pag pag--bordered" aria-label="Bordered pagination">
+                    <input type="radio" name="e" id="e1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="e" id="e2" class="pag-r" aria-label="Page 2">
+                    <input type="radio" name="e" id="e3" class="pag-r" checked aria-label="Page 3">
+                    <input type="radio" name="e" id="e4" class="pag-r" aria-label="Page 4">
+                    <input type="radio" name="e" id="e5" class="pag-r" aria-label="Page 5">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></span>
+                        <label for="e1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></label>
+                        <label for="e2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></label>
+                        <label for="e3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></label>
+                        <label for="e4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></label>
+                    </div>
+                    <label for="e1" class="pag__item">1</label>
+                    <label for="e2" class="pag__item">2</label>
+                    <label for="e3" class="pag__item">3</label>
+                    <label for="e4" class="pag__item">4</label>
+                    <label for="e5" class="pag__item">5</label>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="e2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></label>
+                        <label for="e3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></label>
+                        <label for="e4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></label>
+                        <label for="e5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 5. Track ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">5</span><span class="specimen__name">Track</span></div>
+                <nav class="pag pag--track" aria-label="Track pagination">
+                    <input type="radio" name="f" id="f1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="f" id="f2" class="pag-r" aria-label="Page 2">
+                    <input type="radio" name="f" id="f3" class="pag-r" aria-label="Page 3">
+                    <input type="radio" name="f" id="f4" class="pag-r" checked aria-label="Page 4">
+                    <input type="radio" name="f" id="f5" class="pag-r" aria-label="Page 5">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+                        <label for="f1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="f2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="f3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="f4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                    </div>
+                    <div class="pag__track-area">
+                        <div class="pag__track-line">
+                            <div class="pag__track-thumb"></div>
+                        </div>
+                        <div class="pag__track-items">
+                            <label for="f1" class="pag__item">1</label>
+                            <label for="f2" class="pag__item">2</label>
+                            <label for="f3" class="pag__item">3</label>
+                            <label for="f4" class="pag__item">4</label>
+                            <label for="f5" class="pag__item">5</label>
+                        </div>
+                    </div>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="f2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="f3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="f4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="f5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 6. Compact ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">6</span><span class="specimen__name">Compact</span></div>
+                <nav class="pag pag--compact" aria-label="Compact pagination">
+                    <input type="radio" name="c" id="c1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="c" id="c2" class="pag-r" aria-label="Page 2">
+                    <input type="radio" name="c" id="c3" class="pag-r" checked aria-label="Page 3">
+                    <input type="radio" name="c" id="c4" class="pag-r" aria-label="Page 4">
+                    <input type="radio" name="c" id="c5" class="pag-r" aria-label="Page 5">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+                        <label for="c1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="c2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="c3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="c4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                    </div>
+                    <span class="pag__counter" aria-live="polite" aria-atomic="true">
+                        <span class="pag__digit-area">
+                            <span class="pag__digit">1</span>
+                            <span class="pag__digit">2</span>
+                            <span class="pag__digit">3</span>
+                            <span class="pag__digit">4</span>
+                            <span class="pag__digit">5</span>
+                        </span>
+                        <span class="pag__sep"> / 5</span>
+                    </span>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="c2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="c3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="c4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="c5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 7. Progress ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">7</span><span class="specimen__name">Progress</span></div>
+                <nav class="pag pag--progress" aria-label="Progress pagination">
+                    <input type="radio" name="h" id="h1" class="pag-r" aria-label="Page 1">
+                    <input type="radio" name="h" id="h2" class="pag-r" aria-label="Page 2">
+                    <input type="radio" name="h" id="h3" class="pag-r" checked aria-label="Page 3">
+                    <input type="radio" name="h" id="h4" class="pag-r" aria-label="Page 4">
+                    <input type="radio" name="h" id="h5" class="pag-r" aria-label="Page 5">
+                    <div class="pag__nav-zone pag__nav-zone--prev" aria-hidden="true">
+                        <span class="pag__arrow pag__arrow--prev pag__arrow--off" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+                        <label for="h1" class="pag__arrow pag__arrow--prev" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="h2" class="pag__arrow pag__arrow--prev" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="h3" class="pag__arrow pag__arrow--prev" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                        <label for="h4" class="pag__arrow pag__arrow--prev" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></label>
+                    </div>
+                    <div class="pag__bar">
+                        <div class="pag__fill"></div>
+                        <label for="h1" class="pag__bar-seg"></label>
+                        <label for="h2" class="pag__bar-seg"></label>
+                        <label for="h3" class="pag__bar-seg"></label>
+                        <label for="h4" class="pag__bar-seg"></label>
+                        <label for="h5" class="pag__bar-seg"></label>
+                    </div>
+                    <span class="pag__counter" aria-live="polite" aria-atomic="true">
+                        <span class="pag__digit-area">
+                            <span class="pag__digit">1</span>
+                            <span class="pag__digit">2</span>
+                            <span class="pag__digit">3</span>
+                            <span class="pag__digit">4</span>
+                            <span class="pag__digit">5</span>
+                        </span>
+                        <span class="pag__sep">/ 5</span>
+                    </span>
+                    <div class="pag__nav-zone pag__nav-zone--next" aria-hidden="true">
+                        <label for="h2" class="pag__arrow pag__arrow--next" data-when="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="h3" class="pag__arrow pag__arrow--next" data-when="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="h4" class="pag__arrow pag__arrow--next" data-when="3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <label for="h5" class="pag__arrow pag__arrow--next" data-when="4"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></label>
+                        <span class="pag__arrow pag__arrow--next pag__arrow--off" data-when="5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- ═══ 8. Steps ═══ -->
+            <div class="specimen">
+                <div class="specimen__label"><span class="specimen__num">8</span><span class="specimen__name">Steps</span></div>
+                <nav class="pag pag--steps" aria-label="Steps pagination">
+                    <input type="radio" name="s" id="s1" class="pag-r" aria-label="Step 1">
+                    <input type="radio" name="s" id="s2" class="pag-r" checked aria-label="Step 2">
+                    <input type="radio" name="s" id="s3" class="pag-r" aria-label="Step 3">
+                    <input type="radio" name="s" id="s4" class="pag-r" aria-label="Step 4">
+                    <input type="radio" name="s" id="s5" class="pag-r" aria-label="Step 5">
+                    <div class="pag__steps-track">
+                        <div class="pag__steps-line">
+                            <div class="pag__steps-fill"></div>
+                        </div>
+                        <label for="s1" class="pag__step-node"><span>1</span></label>
+                        <label for="s2" class="pag__step-node"><span>2</span></label>
+                        <label for="s3" class="pag__step-node"><span>3</span></label>
+                        <label for="s4" class="pag__step-node"><span>4</span></label>
+                        <label for="s5" class="pag__step-node"><span>5</span></label>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+        <p class="code-comments">Comment <span class="emph">"code"</span> for the full source 👇</p>
+        <p class="bottom-bar">
+            <span class="modern-frontend-developer"><span class="emph">Don't miss out on AI revolution</span> 🤖</span>
+            <span class="learning-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#code-icon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="code-icon-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="var(--grad-start)"/><stop offset="100%" stop-color="var(--grad-end)"/></linearGradient></defs><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg> learning.atheros.ai
+            </span>
+        </p>
+    </div>
+
+</body>
+
+</html>
